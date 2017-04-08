@@ -1,0 +1,67 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta charset="utf-8" />
+    <title>布置传感器节点</title>
+<!-- 引入 ECharts 文件 -->
+    <script src="echarts.common.min.js"></script>
+</head>
+<body>
+ <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 600px;height:600px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+   var legendData = [
+    'ID 1', 'ID 2', 'ID 3', '',
+    'ID 4', 'ID 5', 'ID 6', '',
+    'ID 7', 'ID 8', 'ID 9','',
+    'ID 10'
+];
+
+var series = [];
+
+echarts.util.each(legendData, function(name) {
+    console.log(name);
+    if (name) {
+        series.push({
+            name: name,
+            type: 'scatter',
+            data: [
+                [Math.floor(Math.random()*100), Math.floor(Math.random()*100)]
+            ]
+        });
+    }
+});
+
+option = {
+    legend: {
+        bottom: 20,
+        orient: 'vertical',
+        data: legendData
+    },
+    tooltip: {
+        formatter: 'Group {a}: ({c})'
+    },
+    xAxis: {gridIndex: 0, min: 0, max: 100},
+    yAxis: {gridIndex: 0, min: 0, max: 100},
+    visualMap:{inRange: {
+                symbolSize: [25]
+            }},
+    grid: {
+        bottom: 120,
+        left:150,
+       width: '50%', 
+       height: '50%'
+    
+    },
+    series: series
+};
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+</html>
