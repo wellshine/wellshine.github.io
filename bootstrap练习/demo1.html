@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>管理系统</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    body {
+      padding-top: 70px;
+    }
+    .btn-group1{
+      padding: 0 0 20px 20px;
+    }
+    .progress{
+      margin-top: 10px;
+    }
+    .sidenav{
+      background-color: #f5f5f5;
+      position: fixed;
+      top: 50px;
+      bottom: 0;
+      left: 0;
+      right: 84%;
+      padding-top: 20px;
+    }
+    .btn_details{
+      margin: 20px 0 20px 20px;
+    }
+
+
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">某管理系统</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+             role="button" aria-haspopup="true" aria-expanded="false">功能 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li><a href="#">帮助</a></li>
+      </ul>
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="用户名">
+          <input type="text" class="form-control" placeholder="密码">
+        </div>
+        <button type="submit" class="btn btn-default">登录</button>
+      </form>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <ul class="nav nav-pills nav-stacked sidenav">
+        <li><a href="#" class="list-group-item active">首页</a></li>
+        <br>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">信息建立</a></li>
+        <li><a href="#">信息查询</a></li>
+        <li><a href="#">信息管理</a></li>
+        <br>
+        <li><a href="#">设置</a></li>
+        <li><a href="#">帮助</a></li>
+      </ul>
+    </div>
+    <div class="col-md-10">
+      <h1>管理控制台</h1>
+      <hr class="divider">
+      <div class="row btn-group1">
+
+        <!-- Standard button -->
+        <button type="button" class="btn btn-default">操作1</button>
+
+        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+        <button type="button" class="btn btn-primary">操作2</button>
+
+        <!-- Indicates a successful or positive action -->
+        <button type="button" class="btn btn-success">操作3</button>
+
+        <!-- Contextual button for informational alert messages -->
+        <button type="button" class="btn btn-info">操作4</button>
+
+        <!-- Indicates caution should be taken with this action -->
+        <button type="button" class="btn btn-warning">操作5</button>
+
+        <!-- Indicates a dangerous or potentially negative action -->
+        <button type="button" class="btn btn-danger">操作6</button>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">最新提醒</h3>
+            </div>
+            <div class="panel-body">
+              <div class="alert alert-success" role="alert">
+                提示： 您的订单（20170409）审核通过
+              </div>
+              <div class="alert alert-danger" role="alert">
+                提示： 您的订单（20170409）被退回
+              </div>
+              <div class="alert alert-warning" role="alert">
+                提示： 您的订单（20170409）客户付款延迟
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">我的任务</h3>
+            </div>
+            <div class="panel-body">
+              <div class="alert alert-info" role="alert">
+                订单审批<span class="badge pull-right">42</span>
+              </div>
+              <div class="alert alert-info" role="alert">
+                收款确认<span class="badge pull-right">20</span>
+              </div>
+              <div class="alert alert-info" role="alert">
+                付款确认<span class="badge pull-right">11</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Panel heading</div>
+
+            <!-- Table -->
+            <table class="table table-striped">
+              <thead>
+              <tr>
+                <th>#</th>
+                <th>产品</th>
+                <th>数量</th>
+                <th>总金额</th>
+                <th>业务员</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>1</td>
+                <td>可口可乐</td>
+                <td>1000</td>
+                <td>3000</td>
+                <td>刘晓明</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>芬达</td>
+                <td>100</td>
+                <td>400</td>
+                <td>刘晓红</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>雪碧</td>
+                <td>200</td>
+                <td>700</td>
+                <td>刘晓蓝</td>
+              </tr>
+              </tbody>
+            </table>
+            <button type="button" class="btn btn-primary  btn_details">查看详情</button>
+          </div>
+        </div>
+
+
+        <div class="col-md-6">
+
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">工程进度</h3>
+            </div>
+            <div class="panel-body">
+              <span class="label label-primary">水井挖掘工程</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                     style="width: 40%;">
+                  <span class="sr-only">40% Complete</span>
+                </div>
+
+              </div>
+              <span class="label label-danger">基建工程</span>
+              <div class="progress">
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                     aria-valuemax="100" style="width: 60%;">
+                  <span class="sr-only">60% Complete</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
