@@ -1,0 +1,10 @@
+{
+  
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff2121",
+    "navigationBarTitleText": "文章列表",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": "true"
+  
+
+}

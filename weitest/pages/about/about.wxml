@@ -1,0 +1,18 @@
+
+<!--pages/about/about.wxml-->
+<view class="about">
+  <view class="about-wei">
+    <view class="about-img">
+      <image src="{{img}}" class="in-img"></image>
+    </view>
+    <view class="about-title">{{title}}</view>
+  </view>
+  <view>{{message}}</view>
+  <view class="btn-area">
+    <view class="body-view">
+      <text>{{text}}</text>
+      <button bindtap="add">add line</button>
+      <button bindtap="remove">remove line</button>
+    </view>
+  </view>
+</view>

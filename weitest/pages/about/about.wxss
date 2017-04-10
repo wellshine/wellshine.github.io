@@ -1,0 +1,6 @@
+/* pages/about/about.wxss */
+.about{}
+.about-wei{text-align: center;}
+.about-img{display: block; width: 100px;height: 100px;margin: 20px auto 0;}
+.about-title{display: inline-block;margin: 20px 0;}
+.about-img image{width: 100px;height: 100px;}

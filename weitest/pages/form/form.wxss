@@ -1,0 +1,55 @@
+/* pages/form/form.wxss */
+label {
+  display: inline-block;
+  min-width: 270rpx;
+  margin-right: 20rpx;
+}
+form{
+  width: 100%;
+}
+.picker-text {
+  margin-left: 20rpx;
+  position: relative;
+}
+.section{
+  width: 100%;
+  margin-bottom: 60rpx;
+}
+.section_center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section:last-child{
+  margin-bottom: 0;
+}
+.section-gap{
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+.section-spacing{
+  box-sizing: border-box;
+  padding: 0 80rpx;
+}
+.section-title{
+  font-size: 28rpx;
+  color: #999999;
+  margin-bottom: 10rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.section-gap .section-title{
+  padding-left: 0;
+  padding-right: 0;
+}
+.section-ctn{
+
+}
+
+/* widget */
+.btn-area{
+  margin-top: 60rpx;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 30rpx;
+}

@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/lists/lists",
+    "pages/about/about",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/detail/detail",
+    "pages/form/form"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff2121",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": "true"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath":"pages/lists/lists",
+        "text": "首页",
+        "iconPath":"little_animal/little_animal_01.png",
+        "selectedIconPath":"little_animal/little_animal_02.png"
+      },
+      {
+        "pagePath":"pages/about/about",
+        "text": "关于",
+        "iconPath":"little_animal/little_animal_03.png",
+        "selectedIconPath":"little_animal/little_animal_04.png"
+      },
+      {
+        "pagePath":"pages/form/form",
+        "text": "用户反馈",
+        "iconPath":"little_animal/little_animal_05.png",
+        "selectedIconPath":"little_animal/little_animal_06.png"
+      }
+    ]
+  }
+}

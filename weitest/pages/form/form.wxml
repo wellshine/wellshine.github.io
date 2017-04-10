@@ -1,0 +1,43 @@
+<!--pages/form/form.wxml-->
+<form bindsubmit="formSubmit" >
+<view class="section">
+    <view class="section__title">姓名</view>
+    <input name="username" placeholder="请输入姓名" />
+  </view>
+ <view class="section section_gap">
+    <view class="section__title">关注的产品</view>
+    <checkbox-group name="product">
+      <label><checkbox value="0"/>微商城</label>
+      <label><checkbox value="1"/>微社区</label>
+    </checkbox-group>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">来源</view>
+    <radio-group name="from">
+      <label><radio value="0"/>百度</label>
+      <label><radio value="1"/>朋友介绍</label>
+    </radio-group>
+  </view>
+<view class="section">
+  <view class="section__title">你所在的地区</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      当前选择：{{array[index]}}
+    </view>
+  </picker>
+</view>
+
+
+  <view class="section section_gap">
+    <view class="section__title">是否为开发者</view>
+    <switch name="switch"/>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">满意度打分</view>
+    <slider name="slider" show-value ></slider>
+  </view>
+
+  <view class="btn-area">
+    <button formType="submit">提交</button>
+  </view>
+</form>
