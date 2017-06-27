@@ -1,1 +1,121 @@
-<h1>Hello</h1>
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我的日常demo列表</title>
+<link rel='stylesheet prefetch' href='https://cdn.jsdelivr.net/foundation/5.0.2/css/foundation.css'>
+<link href="homepage/css/mtree.css" rel="stylesheet" type="text/css">
+<style>
+.mtree-demo .mtree {
+  background: #EEE;
+  margin: 20px auto;
+  max-width: 320px;
+  border-radius: 3px;
+}
+
+.mtree-skin-selector {
+  text-align: center;
+  background: #EEE;
+  padding: 10px 0 15px;
+}
+
+.mtree-skin-selector li {
+  display: inline-block;
+  float: none;
+}
+
+.mtree-skin-selector button {
+  padding: 5px 10px;
+  margin-bottom: 1px;
+  background: #BBB;
+}
+
+.mtree-skin-selector button:hover { background: #999; }
+
+.mtree-skin-selector button.active {
+  background: #999;
+  font-weight: bold;
+}
+
+.mtree-skin-selector button.csl.active { background: #FFC000; }
+  img{
+      height: 200px;
+      width: 200px;
+    margin-left:40px;
+  }
+</style>
+</head>
+
+<body>
+<h1 style="margin-top:150px;" align="center">我的日常demo列表</h1>
+  <ul class="mtree transit">
+    <li><a href="#">Bootstrap练习</a>
+      <ul>
+        <li><a href="https://wellshine.github.io/bootstraptest/demo1.html" target="_blank">管理系统界面</a></li>
+        <li><a href="https://wellshine.github.io/bootstraptest/index.html" target="_blank">现代浏览器</a></li>
+      </ul>
+    </li>
+    <li><a href="#">ife2017百度前端学院</a>
+      <ul>
+        <li><a href="#">JS斌斌学院</a>
+          <ul>
+            <li><a href="https://wellshine.github.io/ife2017/JS学院/task01.html" target="_blank">模拟队列</a></li>
+            <li><a href="https://wellshine.github.io/ife2017/JS学院/task02.html" target="_blank">可视化排序</a></li>
+            <li><a href="https://wellshine.github.io/ife2017/JS学院/task03.html" target="_blank">多输入匹配查询</a></li>
+          </ul>
+        </li>
+        <li><a href="#">耀耀学院</a>
+          <ul>
+            <li><a href="https://wellshine.github.io/ife2017/耀耀学院/task01.html" target="_blank">表单验证</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#">可视化练习</a>
+      <ul>
+        <li><a href="https://wellshine.github.io/可视化随机部署传感器/test1.html" target="_blank">ECharts随机部署传感器</a></li>
+      </ul>
+    </li>
+    <li><a href="#">微信测试号实验</a>
+      <ul>
+        <li><a href="#">公众号二维码</a>
+          <ul>
+            <li><img src="image/公众号二维码.jpg"></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+</ul>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script> 
+<script src='http://cdnjs.cloudflare.com/ajax/libs/velocity/0.2.1/jquery.velocity.min.js'></script> 
+<script src="homepage/js/mtree.js"></script>
+<script src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+<script>
+$(document).ready(function() {
+  var mtree = $('ul.mtree');
+
+  // Skin selector for demo
+  mtree.wrap('<div class=mtree-demo></div>');
+  var skins = ['bubba','skinny','transit','jet','nix'];
+  mtree.addClass(skins[0]);
+  $('body').prepend('<div class="mtree-skin-selector"><ul class="button-group radius"></ul></div>');
+  var s = $('.mtree-skin-selector');
+  $.each(skins, function(index, val) {
+    s.find('ul').append('<li><button class="small skin">' + val + '</button></li>');
+  });
+
+  s.find('button.skin').each(function(index){
+    $(this).on('click.mtree-skin-selector', function(){
+      s.find('button.skin.active').removeClass('active');
+      $(this).addClass('active');
+      mtree.removeClass(skins.join(' ')).addClass(skins[index]);
+    });
+  })
+  s.find('button:first').addClass('active');
+  s.find('.csl').on('click.mtree-close-same-level', function(){
+    $(this).toggleClass('active');
+  });
+});
+</script>
+</body>
+</html>
